@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>David van der Zande – AI Product & Automation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --paper: #fff;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --primary: #0f4c81;
+      --accent: #0ea5e9;
+      --line: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    .page {
+      max-width: 1000px;
+      margin: 28px auto;
+      background: var(--paper);
+      box-shadow: 0 10px 30px rgba(17,24,39,.06);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    header {
+      padding: 22px 28px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+    .topline {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: start;
+    }
+    h1.name {
+      font-family: 'Lora', serif;
+      font-size: 28px;
+      line-height: 1.05;
+      margin: 0 0 6px 0;
+      color: var(--primary);
+      letter-spacing: .2px;
+    }
+    .role {
+      margin: 0;
+      font-weight: 600;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .contacts {
+      text-align: right;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .contacts a { color: inherit; text-decoration: none; }
+    .contacts a:hover { color: var(--accent); text-decoration: underline; }
+    .tagline {
+      margin-top: 4px;
+      font-size: 13px;
+      color: var(--ink);
+    }
+    main { padding: 22px 28px 28px; }
+    .section + .section { margin-top: 22px; }
+    .section h2 {
+      font-family: 'Lora', serif;
+      font-size: 18px;
+      margin: 0 0 10px;
+      color: var(--primary);
+      letter-spacing: .2px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 16px;
+      background: #fff;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 860px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .contacts { text-align: left; }
+    }
+    .entry { margin-bottom: 10px; }
+    .entry-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: baseline;
+    }
+    .entry-title { font-weight: 700; }
+    .entry-sub { color: var(--muted); font-size: 13px; }
+    .entry-date { color: var(--muted); font-size: 13px; white-space: nowrap; }
+    .bullets { margin: 6px 0 0 18px; }
+    .bullets li { margin: 4px 0; }
+
+    /* Tools portfolio */
+    .tool {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 6px 10px;
+      align-items: start;
+    }
+    .tool h3 { margin: 0; font-size: 14px; line-height: 1.2; color: var(--ink); }
+    .tool p { margin: 0; font-size: 13px; color: var(--muted); }
+    .impact {
+      font-size: 12px;
+      color: #065f46;
+      background: #ecfdf5;
+      border: 1px solid #d1fae5;
+      border-radius: 8px;
+      padding: 4px 8px;
+      justify-self: end;
+      white-space: nowrap;
+    }
+
+    footer {
+      padding: 16px 28px 26px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      background: linear-gradient(180deg, #fff, #fafcff);
+    }
+
+    /* Print styles for PDF rendering by browsers */
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; border-radius: 0; margin: 0; }
+      header { border-bottom: 0; padding-bottom: 4px; }
+      .section + .section { margin-top: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="topline">
+        <div>
+          <h1 class="name">David van der Zande</h1>
+          <p class="role">AI Product & Automation • Munich, Germany</p>
+          <p class="tagline">Creator of 14+ internal tools for Alexa operations • LLMs, AWS, Python, Data & Process Automation</p>
+        </div>
+        <div class="contacts">
+          <div><a href="mailto:davidzande@icloud.com">davidzande@icloud.com</a></div>
+          <div><a href="http://linkedin.com/in/david-zande" target="_blank" rel="noopener">linkedin.com/in/david-zande</a></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <h2>Profile</h2>
+        <div class="card">
+          Technical PM with a builder mindset. I design, ship, and maintain AI-powered automations and internal tools that reduce manual work and improve data quality. Recently: deployed a Claude (AWS Bedrock) RAG system for large-scale survey & feedback analysis, plus a portfolio of 14+ tools used by Alexa Preview teams (web apps, scripts, and integrations).
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Experience</h2>
+        <div class="card">
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <div class="entry-title">Project Manager</div>
+                <div class="entry-sub">Amazon • Munich, Bavaria, Germany</div>
+              </div>
+              <div class="entry-date">Jun 2022 – Present</div>
+            </div>
+            <ul class="bullets">
+              <li>Built and shipped <strong>14+ internal tools</strong> (automation scripts, web apps, dashboards) for Alexa Preview research & operations, cutting manual effort up to <strong>80%+</strong> on key workflows.</li>
+              <li>Developed a <strong>Claude (AWS Bedrock) RAG pipeline</strong> in Python to analyze 20k+ customer inputs across 10+ projects; accelerated insights and standardized reporting.</li>
+              <li>Owned the internal <strong>Automation Hub</strong> organizing research, automation, execution, and AI tools; maintained enablement docs and SOPs.</li>
+              <li>Launched QuickSight dashboards and API-powered workflows to connect KCSI, Device Tracker, Qualtrics, and Slack.</li>
+              <li>Coordinated cross-functional testing and staged rollouts (internal testing → early access → GA) with demo sessions and docs.</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <div class="entry-title">Project Manager</div>
+                <div class="entry-sub">WIP Renewable Energies • Munich, Germany</div>
+              </div>
+              <div class="entry-date">Jun 2021 – Jun 2022</div>
+            </div>
+            <ul class="bullets">
+              <li>Coordinated EU-funded renewable energy projects; led day-to-day delivery, partner comms, and results presentation.</li>
+              <li>Built websites/communications; delivered data research for new proposals and internal decision support.</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <div class="entry-title">Intern</div>
+                <div class="entry-sub">WIP Renewable Energies</div>
+              </div>
+              <div class="entry-date">Dec 2020 – Jun 2021</div>
+            </div>
+            <ul class="bullets">
+              <li>Supported proposal development, research tasks, and partner communication.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Projects & Internal Tools (selected)</h2>
+        <div class="grid-2">
+          <div class="tool">
+            <div>
+              <h3>LLM Insights (RAG)</h3>
+              <p>Claude Bedrock pipeline for large-scale feedback analysis and reporting.</p>
+            </div>
+            <div class="impact">Insight speed ↑</div>
+          </div>
+          <div class="tool">
+            <div>
+              <h3>Tester Portal</h3>
+              <p>Unified data aggregator for KCSI, Sensai, Device Tracker; single & bulk lookups.</p>
+            </div>
+            <div class="impact">−70% lookup time</div>
+          </div>
+          <div class="tool">
+            <div>
+              <h3>PreviewPoint</h3>
+              <p>Qualtrics survey automation pipeline and execution helper.</p>
+            </div>
+            <div class="impact">10× faster runs</div>
+          </div>
+          <div class="tool">
+            <div>
+              <h3>QuickSight Dashboards</h3>
+              <p>Interactive KPI views for customer signals & research ops.</p>
+            </div>
+            <div class="impact">Visibility ↑</div>
+          </div>
+          <div class="tool">
+            <div>
+              <h3>Kamino Account Creator</h3>
+              <p>Automated creation/management of test accounts.</p>
+            </div>
+            <div class="impact">−90% manual setup</div>
+          </div>
+          <div class="tool">
+            <div>
+              <h3>Automation Hub (Index)</h3>
+              <p>Tabbed hub grouping research, automation, execution, AI tools with links and SOPs.</p>
+            </div>
+            <div class="impact">Enablement ↑</div>
+          </div>
+        </div>
+        <p style="margin-top:8px; color:#6b7280; font-size:13px;">Additional automation and data tools available upon request.</p>
+      </section>
+
+      <section class="section">
+        <h2>Education</h2>
+        <div class="grid-2">
+          <div class="card">
+            <div class="entry-head">
+              <div>
+                <div class="entry-title">MSc Economics & Management</div>
+                <div class="entry-sub">Specialisation: Data Science & Sustainability • Wageningen University, Netherlands</div>
+              </div>
+              <div class="entry-date">2015 – 2020</div>
+            </div>
+            <ul class="bullets">
+              <li><strong>Thesis:</strong> Machine Vision for Deforestation Detection from Satellite Imagery.</li>
+              <li><strong>Methods:</strong> CNN-based image classification & change detection; Python (pandas, scikit-learn, OpenCV).</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="entry-head">
+              <div>
+                <div class="entry-title">BSc Economics & Management</div>
+                <div class="entry-sub">Specialisation: Data Science & Sustainability • Eindhoven University of Technology, Netherlands</div>
+              </div>
+              <div class="entry-date">2014 – 2015</div>
+            </div>
+            <ul class="bullets">
+              <li><strong>Thesis:</strong> Blockchain Applications for Smart Grids and Energy Trading.</li>
+              <li><strong>Scope:</strong> Smart-contract PoC on Ethereum for grid balancing and incentive design.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="margin-top:12px;">
+          <div class="entry-head">
+            <div>
+              <div class="entry-title">VWO</div>
+              <div class="entry-sub">Markland College</div>
+            </div>
+            <div class="entry-date">2008 – 2014</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Skills & Competencies</h2>
+        <div class="grid-2">
+          <div class="card">
+            <strong>Technical</strong>
+            <ul class="bullets">
+              <li>Python, JS/Tampermonkey, APIs/Webhooks, AWS (Bedrock, Lambda, S3), QuickSight</li>
+              <li>LLMs & RAG, Prompting, Evaluation Loops</li>
+              <li>Data wrangling, dashboards, automation scripting</li>
+            </ul>
+          </div>
+          <div class="card">
+            <strong>Product & Delivery</strong>
+            <ul class="bullets">
+              <li>Discovery → Delivery → Enablement</li>
+              <li>Roadmapping, staged launches (Alpha/Early Access/GA)</li>
+              <li>Stakeholder management, docs & demos</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Certifications</h2>
+        <div class="card">
+          Python for Data Science and AI
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Available for AI Product / Technical PM roles. Portfolio and code samples on request.
+    </footer>
+  </div>
+</body>
+</html>
