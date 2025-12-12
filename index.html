@@ -247,6 +247,52 @@
       gap: 2rem;
     }
 
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--surface);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    .project-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--ink);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .project-metric {
+      font-size: 0.75rem;
+      background: var(--accent);
+      color: white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 99px;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+
+    .project-desc {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
     .skill-category h3 {
       font-size: 1rem;
       text-transform: uppercase;
@@ -295,6 +341,7 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
+        <a href="#projects">Tools</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </div>
@@ -333,7 +380,6 @@
               <li>Developed a <strong>Claude (AWS Bedrock)</strong> tool in Python to analyze 20k+ multilingual customer feedback.</li>
               <li><strong>Managed cross-functional collaboration</strong> between UX research, QA, and engineering; drove adoption of automation frameworks and operational excellence.</li>
               <li>Owned the internal <strong>Automation Hub</strong>, creating documentation and enablement materials to scale adoption across global teams.</li>
-              <li><strong>Selected tools delivered:</strong> LLM Insights (feedback analysis pipeline), Tester Portal (unified data lookup, −70% lookup time), PreviewPoint (Qualtrics survey automation, 10× faster runs), Kamino Account Creator (automated test account management, −90% manual setup), Netflix Test Accounts (bulk creator, 40+ hrs saved), and QuickSight dashboards with LLM insights.</li>
             </ul>
           </div>
         </article>
@@ -385,6 +431,73 @@
             </ul>
           </div>
         </article>
+
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Selected Automation Tools</h2>
+      <div class="projects-grid">
+        
+        <div class="project-card">
+          <div class="project-title">
+            LLM Insights
+            <span class="project-metric">Customer insights ↑</span>
+          </div>
+          <div class="project-desc">
+            Claude Bedrock pipeline for large-scale feedback analysis and reporting.
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">
+            Tester Portal
+            <span class="project-metric">−70% lookup time</span>
+          </div>
+          <div class="project-desc">
+            Unified data aggregator for KCSI, Sensai, Device Tracker; single & bulk lookups.
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">
+            PreviewPoint
+            <span class="project-metric">10× faster runs</span>
+          </div>
+          <div class="project-desc">
+            Qualtrics survey automation pipeline and execution helper.
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">
+            Kamino Account Creator
+            <span class="project-metric">−90% manual setup</span>
+          </div>
+          <div class="project-desc">
+            Automated creation/management of test accounts.
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">
+            Netflix Test Accounts
+            <span class="project-metric">40+ hrs saved</span>
+          </div>
+          <div class="project-desc">
+            Bulk account creator replacing manual one-by-one creation.
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">
+            QuickSight Dashboards
+            <span class="project-metric">Visibility ↑</span>
+          </div>
+          <div class="project-desc">
+            Interactive KPI views for customer signals & research ops with LLM insights.
+          </div>
+        </div>
 
       </div>
     </section>
